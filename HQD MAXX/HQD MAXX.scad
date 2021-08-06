@@ -4,15 +4,15 @@ height = 10;
 union() {
     difference(){
         hull(){
-            translate([-5.5, 4.5, 0]) cube([11, 10, height]);
+            translate([-5.5, 4.5, 0]) cube([12, 9, height]);
             cylinder(d=22.5, h=height, $fn=fn);
         }
         translate([0, 0, 1]) hull(){
-            translate([-4.5, 4.5, 0]) cube([9, 9, height]);
+            translate([-4.5, 4.5, 0]) cube([10, 9, height]);
             cylinder(d=20.5, h=height, $fn=fn);
         }
         translate([-5, 0, 0]) cylinder(h=2, d=1, center=true, $fn=fn);
-        translate([2.6, 0, 0]) hull(){ //type-c
+        translate([3.1, 0, 0]) hull(){ //type-c
             translate([0, -3, 0]) cylinder(d=3.2, h=5, $fn=fn);
             translate([0, 3, 0]) cylinder(d=3.2, h=5, $fn=fn);
         }
@@ -34,6 +34,7 @@ union() {
     translate([-16.5, 13.5, 0])difference(){
         cube([33, 12, 43]);    
         translate([1, 1, 1]) cube([31, 10, 43]);
+        translate([14, 0, 1]) cube([5, 3, 2]);
     }
 }
 
